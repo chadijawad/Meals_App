@@ -21,7 +21,7 @@ class _CategoriesScreenState extends State<CategoriesScreen>
     super.initState();
     _animationController = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 30),
+      duration: const Duration(milliseconds: 800),
       lowerBound: 0,
       upperBound: 1,
     );
@@ -76,7 +76,7 @@ class _CategoriesScreenState extends State<CategoriesScreen>
           end: const Offset(0, 0),
         ).animate(
           CurvedAnimation(
-              parent: _animationController, curve: Curves.easeInOut),
+              parent: _animationController, curve: Curves.bounceOut),
         ),
         child: child,
       ),
